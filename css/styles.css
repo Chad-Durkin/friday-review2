@@ -1,0 +1,11 @@
+.jumbotron .btn {
+  margin-top: 10px;
+}
+
+#front-end {
+  display: none;
+}
+
+#back-end {
+  display: none;
+}

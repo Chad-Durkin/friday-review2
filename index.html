@@ -10,19 +10,30 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>What programming track is right for you</h2>
-          <p>Follow along these questions to help guide you to the right track that best fits your interests</p>
+        <h1>What programming track is right for you!</h2>
+        <h2>Follow along these questions to help guide you to the right track that best fits your interests</h2>
+        <p>Are you more interested in the design side of web development, and like to work on the user interface? Then front-end would be for you!</p>
+        <p>Are you interested in what makes the website tick? How it performs and whats going on with the information thats being used or passed in? Then back-end is right up your alley!</p>
+        <p>Select one</p>
+        <div id="first-question">
+          <form id="front-or-back">
+            <select class="form-control" id="which-dev">
+              <option value="front">Front-end</option>
+              <option value="back">Back-end</option>
+            </select>
+            <button type="submit" class="btn">Lets get started!</button>
+          </form>
+        </div>
       </div>
 
-      <p>Are you more interested in the design side of web development, and like to work on the user interface? Then front-end would be for you!</p>
-      <p>Are you interested in what makes the website tick? How it performs and whats going on with the information thats being used or passed in? Then back-end is right up your alley!</p>
-      <p>Now choose one</p>
-      <div id="firstQuestion">
-        <form id="fronOrBack">
-          <select class="form-control" id="beverage">
-            <option value="front">Front-end</option>
-            <option value="back">Back-end</option>
+      <div id="front-end">
+        <p>Allllright! So you chose front-end, great choice! When it comes to front-end, you will be working with either css or design. Imagine <strong>css</strong> as the style, and which makes <strong>design</strong> the graphics, images, structure, and layout, where you will be focusing on <em><strong>User Interface(UI)</strong></em> and <em><strong>User Experience(UX)</strong></em></p>
+        <form id="which-front-end">
+          <select class="form-control" id="css-design">
+            <option value="css">CSS</option>
+            <option value="design">Design</option>
           </select>
+          <button type="submit" class="btn">select</button>
         </form>
       </div>
 
