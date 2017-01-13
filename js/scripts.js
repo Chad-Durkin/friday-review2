@@ -49,10 +49,14 @@ $(document).ready(function() {
     phpIndex = 0;
     rubyIndex = 0;
     javaIndex = 0;
-    $("#ruby-def").css("background-color", "white");
-    $("#php-def").css("background-color", "white");
-    $("#java-def").css("background-color", "white");
-    $("#c-sharp-def").css("background-color", "white");
+    $("#ruby-def").css("background-color", "#f1e3dd");
+    $("#ruby-def").css("color", "#674d3c");
+    $("#php-def").css("background-color", "#f1e3dd");
+    $("#php-def").css("color", "#674d3c");
+    $("#java-def").css("background-color", "#f1e3dd");
+    $("#java-def").css("color", "#674d3c");
+    $("#c-sharp-def").css("background-color", "#f1e3dd");
+    $("#c-sharp-def").css("color", "#674d3c");
     $(".options").hide();
     $("#back-end-intro").show();
   });
@@ -149,19 +153,23 @@ $(document).ready(function() {
 
     if(cSharpIndex >= javaIndex && cSharpIndex >= phpIndex && cSharpIndex >= rubyIndex)
     {
-      $("#c-sharp-def").css("background-color", "red");
+      $("#c-sharp-def").css("background-color", "#667292");
+      $("#c-sharp-def").css("color", "white");
     }
     if(javaIndex >= cSharpIndex && javaIndex >= phpIndex && javaIndex >= rubyIndex)
     {
-      $("#java-def").css("background-color", "red");
+      $("#java-def").css("background-color", "#667292");
+      $("#java-def").css("color", "white");
     }
     if(phpIndex >= javaIndex && phpIndex >= cSharpIndex && phpIndex >= rubyIndex)
     {
-      $("#php-def").css("background-color", "red");
+      $("#php-def").css("background-color", "#667292");
+      $("#php-def").css("color", "white");
     }
     if(rubyIndex >= javaIndex && rubyIndex >= phpIndex && rubyIndex >= cSharpIndex)
     {
-      $("#ruby-def").css("background-color", "red");
+      $("#ruby-def").css("background-color", "#667292");
+      $("#ruby-def").css("color", "white");
     }
 
   });
