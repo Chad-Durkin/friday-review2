@@ -5,29 +5,35 @@ $(document).ready(function() {
 
     if(frontOrBackEnd === "front")
     {
-      $("#back-end").hide();
+      $(".options").hide();
       $("#front-end").show();
     }
     else if(frontOrBackEnd === "back")
     {
-      $("#front-end").hide();
-      $("#back-end").show();
+      $(".options").hide();
+      $("#back-end-intro").show();
     }
   });
 
   $("form#which-front-end").submit(function(event) {
     event.preventDefault();
-    var frontOrBackEnd = $("#which-dev").val();
+    var cssOrDesign = $("#css-design").val();
 
-    if(frontOrBackEnd === "front")
+    if(cssOrDesign === "css")
     {
-      $("#back-end").hide();
-      $("#front-end").show();
+      $("#design").hide();
+      $("#css").show();
     }
-    else if(frontOrBackEnd === "back")
+    else if(cssOrDesign === "design")
     {
-      $("#front-end").hide();
-      $("#back-end").show();
+      $("#css").hide();
+      $("#design").show();
     }
+  });
+
+  $("form#next").submit(function(event) {
+    event.preventDefault();
+    $("#back-end-intro").hide();
+    $("#back-end-options").show();
   });
 });

@@ -1,5 +1,13 @@
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 .jumbotron .btn {
   margin-top: 10px;
+}
+
+.options {
+  display: none;
 }
 
 #front-end {
