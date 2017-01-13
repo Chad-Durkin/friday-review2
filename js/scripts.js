@@ -45,10 +45,16 @@ $(document).ready(function() {
 
   $("form#back-to-intro").submit(function(event) {
     event.preventDefault();
-    $("#correspondingBusiness").hide();
-    $("#back-end-options").hide();
+    cSharpIndex = 0;
+    phpIndex = 0;
+    rubyIndex = 0;
+    javaIndex = 0;
+    $("#ruby-def").css("background-color", "white");
+    $("#php-def").css("background-color", "white");
+    $("#java-def").css("background-color", "white");
+    $("#c-sharp-def").css("background-color", "white");
+    $(".options").hide();
     $("#back-end-intro").show();
-    $("#seperate").hide();
   });
 
   $("form#select-a-back-end").submit(function(event) {
@@ -72,40 +78,92 @@ $(document).ready(function() {
       rubyIndex++;
     }
 
+    $("#back-end-options").hide();
+    $("#back-end-options2").fadeIn();
+
+        console.log(cSharpIndex);
+        console.log(javaIndex);
+        console.log(phpIndex);
+        console.log(rubyIndex);
+  });
+
+  $("form#select-another-back-end").submit(function(event) {
+    event.preventDefault();
+    var whichBackEnd = $("input:radio[name=work]:checked").val();
+
+    if(whichBackEnd === "csharp")
+    {
+      cSharpIndex++;
+    }
+    else if(whichBackEnd === "java")
+    {
+      javaIndex++;
+    }
+    else if(whichBackEnd === "php")
+    {
+      phpIndex++;
+    }
+    else if(whichBackEnd === "ruby")
+    {
+      rubyIndex++;
+    }
+
+    $("#back-end-options2").hide();
+    $("#back-end-options3").fadeIn();
 
     console.log(cSharpIndex);
     console.log(javaIndex);
     console.log(phpIndex);
     console.log(rubyIndex);
-    // $("#correspondingBusiness").show();
-    //
-    // // if(whichBackEnd === "csharp")
-    // // {
-    // //   $("#ruby-def").css("background-color", "white");
-    // //   $("#php-def").css("background-color", "white");
-    // //   $("#java-def").css("background-color", "white");
-    // //   $("#c-sharp-def").css("background-color", "red");
-    // // }
-    // // else if(whichBackEnd === "java")
-    // // {
-    // //   $("#ruby-def").css("background-color", "white");
-    // //   $("#php-def").css("background-color", "white");
-    // //   $("#c-sharp-def").css("background-color", "white");
-    // //   $("#java-def").css("background-color", "red");
-    // // }
-    // // else if(whichBackEnd === "php")
-    // // {
-    // //   $("#ruby-def").css("background-color", "white");
-    // //   $("#c-sharp-def").css("background-color", "white");
-    // //   $("#java-def").css("background-color", "white");
-    // //   $("#php-def").css("background-color", "red");
-    // // }
-    // // else if(whichBackEnd === "ruby")
-    // // {
-    // //   $("#c-sharp-def").css("background-color", "white");
-    // //   $("#php-def").css("background-color", "white");
-    // //   $("#java-def").css("background-color", "white");
-    // //   $("#ruby-def").css("background-color", "red");
-    // // }
+
   });
+
+  $("form#again-select-another-back-end").submit(function(event) {
+    event.preventDefault();
+    var whichBackEnd = $("input:radio[name=demand]:checked").val();
+
+    if(whichBackEnd === "csharp")
+    {
+      cSharpIndex++;
+    }
+    else if(whichBackEnd === "java")
+    {
+      javaIndex++;
+    }
+    else if(whichBackEnd === "php")
+    {
+      phpIndex++;
+    }
+    else if(whichBackEnd === "ruby")
+    {
+      rubyIndex++;
+    }
+
+    $("#back-end-options3").hide();
+    $("#correspondingBusiness").fadeIn();
+
+    console.log(cSharpIndex);
+    console.log(javaIndex);
+    console.log(phpIndex);
+    console.log(rubyIndex);
+
+    if(cSharpIndex >= javaIndex && cSharpIndex >= phpIndex && cSharpIndex >= rubyIndex)
+    {
+      $("#c-sharp-def").css("background-color", "red");
+    }
+    if(javaIndex >= cSharpIndex && javaIndex >= phpIndex && javaIndex >= rubyIndex)
+    {
+      $("#java-def").css("background-color", "red");
+    }
+    if(phpIndex >= javaIndex && phpIndex >= cSharpIndex && phpIndex >= rubyIndex)
+    {
+      $("#php-def").css("background-color", "red");
+    }
+    if(rubyIndex >= javaIndex && rubyIndex >= phpIndex && rubyIndex >= cSharpIndex)
+    {
+      $("#ruby-def").css("background-color", "red");
+    }
+
+  });
+
 });
