@@ -1,8 +1,16 @@
-.container {
-  background-color:  #96ceb4;
+body {
+  background-color: #f1e3dd;
 }
+
+.container {
+}
+
 .jumbotron .btn {
   margin-top: 10px;
+}
+
+.jumbotron {
+  background-color: #667292
 }
 
 .options {
@@ -21,32 +29,3 @@
   float: left;
   margin-right: 10px;
   }
-}
-
-#c-sharp-def.selectBackground1{
-  #c-sharp-def {
-  background-color: red;
-  display: none;
-  }
-}
-
-.selectBackground2{
-  #java-def {
-  background-color: red;
-  display: none;
-  }
-}
-
-.selectBackground3{
-  #php-def {
-  background-color: red;
-  display: none;
-  }
-}
-
-.selectBackground4{
-  #ruby-def {
-  background-color: red;
-  display: none;
-  }
-}
