@@ -47,6 +47,21 @@ $(document).ready(function() {
     event.preventDefault();
     var whichBackEnd = $("input:radio[name=business]:checked").val();
 
+    if(whichBackEnd === csharp)
+    {
 
+    }
+    else if(whichBackEnd === java)
+    {
+
+    }
+    else if(whichBackEnd === php)
+    {
+
+    }
+    else if(whichBackEnd === ruby)
+    {
+
+    }
   });
 });
