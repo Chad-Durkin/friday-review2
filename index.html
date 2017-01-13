@@ -54,9 +54,9 @@
 
       <div id="back-end-options" class="options">
         <p>What sort of business are you trying to work for and what sort of work are you trying to focus on?<p>
-        <form id="select-a-back-end"
+        <form id="select-a-back-end">
         <div class="radio">
-          <label
+          <label>
             <input type="radio" name="business" value="csharp" checked>
             Bigger established business, building internal software.
           </label>
@@ -73,15 +73,23 @@
             Content-heavy websites with relatively little user interaction, building some of the most popular content management systems.
           </label>
         </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="business" value="ruby">
+            Startups and smaller companies, building interactive web applciations, inolving users creating accounts, entering information, and interacting with dynamic content.
+          </label>
+        </div>
+        <form id="back-to-intro">
+          <button type="submit" class="btn" id="introBack">Back</button>
+        </form>
+        <button type="submit" class="btn">select</button>
+        </form>
       </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="business" value="ruby">
-          Startups and smaller companies, building interactive web applciations, inolving users creating accounts, entering information, and interacting with dynamic content.
-        </label>
+
+      <div id="correspondingBusiness">
+
+
       </div>
-      <button type="submit" class="btn">select</button>
-      </form>
 
     </div>
   </body>

@@ -36,4 +36,17 @@ $(document).ready(function() {
     $("#back-end-intro").hide();
     $("#back-end-options").show();
   });
+
+  $("form#back-to-intro").submit(function(event) {
+    event.preventDefault();
+    $("#back-end-options").hide();
+    $("#back-end-intro").show();
+  });
+
+  $("form#select-a-back-end").submit(function(event) {
+    event.preventDefault();
+    var whichBackEnd = $("input:radio[name=business]:checked").val();
+
+
+  });
 });
