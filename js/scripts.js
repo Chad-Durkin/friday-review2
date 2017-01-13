@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  var cSharpIndex = 0;
+  var phpIndex = 0;
+  var rubyIndex = 0;
+  var javaIndex = 0;
+
   $("form#front-or-back").submit(function(event) {
     event.preventDefault();
     var frontOrBackEnd = $("#which-dev").val();
@@ -50,35 +55,57 @@ $(document).ready(function() {
     event.preventDefault();
     var whichBackEnd = $("input:radio[name=business]:checked").val();
 
-    $("#correspondingBusiness").show();
-
     if(whichBackEnd === "csharp")
     {
-      $("#ruby-def").css("background-color", "white");
-      $("#php-def").css("background-color", "white");
-      $("#java-def").css("background-color", "white");
-      $("#c-sharp-def").css("background-color", "red");
+      cSharpIndex++;
     }
     else if(whichBackEnd === "java")
     {
-      $("#ruby-def").css("background-color", "white");
-      $("#php-def").css("background-color", "white");
-      $("#c-sharp-def").css("background-color", "white");
-      $("#java-def").css("background-color", "red");
+      javaIndex++;
     }
     else if(whichBackEnd === "php")
     {
-      $("#ruby-def").css("background-color", "white");
-      $("#c-sharp-def").css("background-color", "white");
-      $("#java-def").css("background-color", "white");
-      $("#php-def").css("background-color", "red");
+      phpIndex++;
     }
     else if(whichBackEnd === "ruby")
     {
-      $("#c-sharp-def").css("background-color", "white");
-      $("#php-def").css("background-color", "white");
-      $("#java-def").css("background-color", "white");
-      $("#ruby-def").css("background-color", "red");
+      rubyIndex++;
     }
+
+
+    console.log(cSharpIndex);
+    console.log(javaIndex);
+    console.log(phpIndex);
+    console.log(rubyIndex);
+    // $("#correspondingBusiness").show();
+    //
+    // // if(whichBackEnd === "csharp")
+    // // {
+    // //   $("#ruby-def").css("background-color", "white");
+    // //   $("#php-def").css("background-color", "white");
+    // //   $("#java-def").css("background-color", "white");
+    // //   $("#c-sharp-def").css("background-color", "red");
+    // // }
+    // // else if(whichBackEnd === "java")
+    // // {
+    // //   $("#ruby-def").css("background-color", "white");
+    // //   $("#php-def").css("background-color", "white");
+    // //   $("#c-sharp-def").css("background-color", "white");
+    // //   $("#java-def").css("background-color", "red");
+    // // }
+    // // else if(whichBackEnd === "php")
+    // // {
+    // //   $("#ruby-def").css("background-color", "white");
+    // //   $("#c-sharp-def").css("background-color", "white");
+    // //   $("#java-def").css("background-color", "white");
+    // //   $("#php-def").css("background-color", "red");
+    // // }
+    // // else if(whichBackEnd === "ruby")
+    // // {
+    // //   $("#c-sharp-def").css("background-color", "white");
+    // //   $("#php-def").css("background-color", "white");
+    // //   $("#java-def").css("background-color", "white");
+    // //   $("#ruby-def").css("background-color", "red");
+    // // }
   });
 });
