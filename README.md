@@ -10,7 +10,7 @@ _This web page allows you to answer questions that will direct you to a front-en
 
 ## Setup/Installation Requirements
 
-* _Clone this repository_
+* _Clone this repository https://rafeekey.github.io/friday-review2/_
 * _Open repository up in your web browser_
 * _Begin to answer questions_
 
