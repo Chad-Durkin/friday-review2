@@ -10,7 +10,25 @@ body {
 }
 
 .jumbotron {
-  background-color: #667292
+  background-color: #667292;
+}
+
+.jumbotron h1{
+  color: #f1e3dd;
+  font-weight: bolder;
+}
+
+.jumbotron h2{
+  color: #f1e3dd;
+  font-weight: bold;
+}
+
+.jumbotron h3{
+  color: #f1e3dd
+}
+
+.jumbotron p{
+  color: #f1e3dd;
 }
 
 .options {
